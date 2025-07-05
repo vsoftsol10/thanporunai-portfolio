@@ -327,13 +327,13 @@ const PorunaiPortfolio = () => {
             {/* Left Column - Text Content */}
             <div className="text-white">
               <div className="mb-6">
-                <BlurText
-                  text="நல்லதொரு நாளுக்காக, இன்று ஒரு நற்செயல்!"
-                  delay={150}
-                  animateBy="words"
-                  direction="top"
-                  className="mb-6 text-lg sm:text-2xl md:text-4xl lg:text-4xl xl:text-5xl font-semibold text-center"
-                />
+               <BlurText
+  text="நல்லதொரு நாளுக்காக, இன்று ஒரு நற்செயல்!"
+  delay={150}
+  animateBy="words"
+  direction="top"
+  className="mb-6 text-4xl sm:text-2xl md:text-4xl lg:text-4xl xl:text-5xl font-semibold text-center"
+/>
               </div>
               <p className="text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 text-green-100 leading-relaxed drop-shadow-lg">
                 Dedicated to social service through river cleaning, women welfare,
