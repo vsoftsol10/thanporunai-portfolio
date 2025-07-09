@@ -9,6 +9,11 @@ import HomeSlideOne from '../assets/HomSlide1.webp';
 import HomeSlideTwo from '../assets/HomeSlide2.webp';
 import HomeSlideThree from '../assets/HomeSlide3.webp';
 import HomeSlideFour from '../assets/HomeSlide4.webp';
+import HomeSliderFive from '../assets/HomeSlide5.webp';
+import HomeSliderSix from '../assets/HomeSlide6.webp';
+import HomeSliderSeven from '../assets/HomeSlide7.webp';
+import HomeSliderEight from '../assets/HomeSlide8.webp';
+import HomeSliderNine from '../assets/HomeSlide9.webp';
 import WhatWeDoOne from '../assets/whatwedo1.webp';
 import WhatWeDoTwo from '../assets/whatwedo2.webp';
 import WhatWeDoThree from '../assets/whatwedo3.webp';
@@ -74,6 +79,31 @@ const PorunaiPortfolio = () => {
       id: 6,
       src: SlideSix,
       alt: "Community Outreach"
+    },
+     {
+      id: 7,
+      src: HomeSliderFive,
+      alt: "Community Outreach"
+    },
+     {
+      id: 8,
+      src: HomeSliderSix,
+      alt: "Community Outreach"
+    },
+     {
+      id: 9,
+      src: HomeSliderSeven,
+      alt: "Community Outreach"
+    },
+     {
+      id: 10,
+      src: HomeSliderEight,
+      alt: "Community Outreach"
+    },
+     {
+      id: 11,
+      src: HomeSliderNine,
+      alt: "Community Outreach"
     }
   ];
 
@@ -100,7 +130,7 @@ const PorunaiPortfolio = () => {
     {
       id: 1,
       title: "River Cleaning Initiative",
-      description: "21 நாட்களில் தாமிரபரணி நதியிலிருந்து குப்பைகளை அகற்றியது தன்பொருநை அறக்கட்டளை",
+      description: "21 நாட்களில் தாமிரபரணி நதியிலிருந்து குப்பைகளை அகற்றியது தண்பொருநை அறக்கட்டளை",
       image: WhatWeDoOne,
       category: "Environment",
       icon: <Droplets className="w-6 h-6" />
@@ -108,7 +138,7 @@ const PorunaiPortfolio = () => {
     {
       id: 2,
       title: "Supporting for Sports Student",
-      description: "தன்பொருநை அறக்கட்டளை, ராணி அண்ணா மகளிர் கல்லூரிக்கு எதிர்கால விளையாட்டு முன்னேற்றத்திற்காக வாலிபால் வலை வழங்கியுள்ளது.",
+      description: "தண்பொருநை அறக்கட்டளை, ராணி அண்ணா மகளிர் கல்லூரிக்கு எதிர்கால விளையாட்டு முன்னேற்றத்திற்காக வாலிபால் வலை வழங்கியுள்ளது.",
       image: WhatWeDoTwo,
       category: "Sports",
       icon: <Users className="w-6 h-6" />
@@ -116,7 +146,7 @@ const PorunaiPortfolio = () => {
     {
       id: 3,
       title: "Tree Plantation Drive",
-      description: "தன்பொருநை அறக்கட்டளை, மரக்கன்று நட்டு, சுற்றுச்சூழல் பாதுகாப்பில் தனது பங்களிப்பை அளித்தது.",
+      description: "தண்பொருநை அறக்கட்டளை, மரக்கன்று நட்டு, சுற்றுச்சூழல் பாதுகாப்பில் தனது பங்களிப்பை அளித்தது.",
       image: WhatWeDoThree,
       category: "Plantation",
       icon: <GraduationCap className="w-6 h-6" />
@@ -124,7 +154,7 @@ const PorunaiPortfolio = () => {
     {
       id: 4,
       title: "Marathon for Health",
-      description: "ஒவ்வொரு 3 மாதத்திற்கும் ஒருமுறை, தன்பொருநை அறக்கட்டளை திருநெல்வேலி அண்ணா ஸ்டேடியத்தில் மாரத்தான் ஓட்டப்பந்தயத்தை நடத்துகிறது.",
+      description: "ஒவ்வொரு 3 மாதத்திற்கும் ஒருமுறை, தண்பொருநை அறக்கட்டளை திருநெல்வேலி அண்ணா ஸ்டேடியத்தில் மாரத்தான் ஓட்டப்பந்தயத்தை நடத்துகிறது.",
       image: WhatWeDoFour,
       category: "Healthcare",
       icon: <Heart className="w-6 h-6" />
@@ -132,7 +162,7 @@ const PorunaiPortfolio = () => {
     {
       id: 5,
       title: "Food Distribution",
-      description: "தன்பொருநை அறக்கட்டளை குழந்தைகளுக்காக சிறப்பு உணவுவிருந்து வழங்கியது.",
+      description: "தண்பொருநை அறக்கட்டளை குழந்தைகளுக்காக சிறப்பு உணவுவிருந்து வழங்கியது.",
       image: WhatWeDoFive,
       category: "Community Service",
       icon: <Home className="w-6 h-6" />
@@ -140,7 +170,7 @@ const PorunaiPortfolio = () => {
     {
       id: 6,
       title: "Free Medical Camp",
-      description: "தன்பொருநை அறக்கட்டளை இலவச மருத்துவ முகாமை நடத்தியுள்ளது.",
+      description: "தண்பொருநை அறக்கட்டளை இலவச மருத்துவ முகாமை நடத்தியுள்ளது.",
       image: SlideOne,
       category: "Medical",
       icon: <TreePine className="w-6 h-6" />
@@ -170,11 +200,12 @@ const PorunaiPortfolio = () => {
 
   // Auto-slide functionality for hero images
   useEffect(() => {
-    const heroTimer = setInterval(() => {
-      setHeroImageSlide((prev) => (prev + 1) % heroImages.length);
-    }, 4000);
-    return () => clearInterval(heroTimer);
-  }, [heroImages.length]);
+  const heroTimer = setInterval(() => {
+    setHeroImageSlide((prev) => (prev + 1) % heroImages.length);
+  }, 1000); 
+  return () => clearInterval(heroTimer);
+}, []);
+
 
   // Auto-slide functionality for services
   useEffect(() => {
@@ -215,61 +246,63 @@ const PorunaiPortfolio = () => {
     <div className="min-h-screen ">
       {/* <DustParticlesBackground /> */}
       {/* Navigation */}
-      <nav className="z-50 bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 shadow-lg">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-38"> {/* Increased from h-20 to h-28 */}
-            {/* Logo */}
-            <div className="flex items-center">
-              <div className="w-40 h-40 flex items-center justify-center"> {/* Match height to navbar */}
-                <img
-                  src={Logo}
-                  alt="தன்பொருணை அமைப்பு Logo"
-                  className="w-full h-full object-contain"
-                />
-              </div>
-            </div>
+      <nav className="z-50 shadow-lg flex">
+  {/* Left Section - Logo + Name */}
+  <div className="bg-green-600 px-6 py-2 flex items-center space-x-4 w-full md:w-[40%]">
+    <div className="w-32 h-32 md:w-40 md:h-40">
 
-            {/* Desktop Menu */}
-            <div className="hidden md:flex space-x-8">
-              {menuItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-gray-800 hover:text-green-700 font-medium transition-colors duration-200"
-                >
-                  {item.name}
-                </a>
-              ))}
-            </div>
+      <img
+        src={Logo}
+        alt="தன்பொருணை அமைப்பு Logo"
+        className="w-full h-full object-contain"
+      />
+    </div>
+    <h1 className="text-white text-xl md:text-2xl font-bold">தண்பொருநை அறக்கட்டளை</h1>
+  </div>
 
-            {/* Mobile Menu Button */}
-            <button
-              className="md:hidden p-2 rounded-md text-gray-800 hover:bg-yellow-300"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
-        </div>
+  {/* Right Section - Navigation */}
+  <div className="bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 flex-1 px-4 sm:px-6 lg:px-8 flex items-center justify-end">
+    {/* Desktop Menu */}
+    <div className="hidden md:flex space-x-8">
+      {menuItems.map((item) => (
+        <a
+          key={item.name}
+          href={item.href}
+          className="text-gray-800 hover:text-green-700 font-medium transition-colors duration-200"
+        >
+          {item.name}
+        </a>
+      ))}
+    </div>
 
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="md:hidden bg-yellow-400 border-t border-yellow-500">
-            <div className="px-2 pt-2 pb-3 space-y-1">
-              {menuItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="block px-3 py-2 text-gray-800 hover:bg-yellow-300 rounded-md font-medium"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </a>
-              ))}
-            </div>
-          </div>
-        )}
-      </nav>
+    {/* Mobile Menu Button */}
+    <button
+      className="md:hidden p-2 rounded-md text-gray-800 hover:bg-yellow-300"
+      onClick={() => setIsMenuOpen(!isMenuOpen)}
+    >
+      {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+    </button>
+  </div>
+
+  {/* Mobile Dropdown Menu */}
+  {isMenuOpen && (
+    <div className="md:hidden w-full bg-yellow-400 border-t border-yellow-500">
+      <div className="px-4 pt-2 pb-3 space-y-1">
+        {menuItems.map((item) => (
+          <a
+            key={item.name}
+            href={item.href}
+            className="block px-3 py-2 text-gray-800 hover:bg-yellow-300 rounded-md font-medium"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            {item.name}
+          </a>
+        ))}
+      </div>
+    </div>
+  )}
+</nav>
+
 
       {/* Hero Section */}
       <section id="home" className="relative pt-5 min-h-screen overflow-hidden flex items-center">
@@ -327,13 +360,13 @@ const PorunaiPortfolio = () => {
             {/* Left Column - Text Content */}
             <div className="text-white">
               <div className="mb-6">
-               <BlurText
-  text="நல்லதொரு நாளுக்காக, இன்று ஒரு நற்செயல்!"
-  delay={150}
-  animateBy="words"
-  direction="top"
-  className="mb-6 text-4xl sm:text-2xl md:text-4xl lg:text-4xl xl:text-5xl font-semibold text-center"
-/>
+                <BlurText
+                  text="நல்லதொரு நாளுக்காக, இன்று ஒரு நற்செயல்!"
+                  delay={150}
+                  animateBy="words"
+                  direction="top"
+                  className="mb-6 text-4xl sm:text-2xl md:text-4xl lg:text-4xl xl:text-5xl font-semibold text-center"
+                />
               </div>
               <p className="text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 text-green-100 leading-relaxed drop-shadow-lg">
                 Dedicated to social service through river cleaning, women welfare,
