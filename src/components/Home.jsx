@@ -246,63 +246,65 @@ const PorunaiPortfolio = () => {
     <div className="min-h-screen ">
       {/* <DustParticlesBackground /> */}
       {/* Navigation */}
-      <nav className="z-50 shadow-lg flex">
-  {/* Left Section - Logo + Name */}
-  <div className="bg-green-600 px-6 py-2 flex items-center space-x-4 w-full md:w-[40%]">
-    <div className="w-32 h-32 md:w-40 md:h-40">
+      <header className="relative z-50 shadow-lg w-full">
+      {/* Main Header */}
+      <div className="flex min-h-[80px] sm:min-h-[100px] w-full">
+        {/* Left Section - Logo + Name */}
+        <div className="bg-green-600 px-3 sm:px-4 md:px-6 py-2 sm:py-3 flex items-center space-x-2 sm:space-x-3 md:space-x-4 flex-1 lg:flex-none lg:w-[45%]">
+          <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 flex-shrink-0">
+            <img
+              src={Logo}
+              alt="தன்பொருணை அமைப்பு Logo"
+              className="w-full h-full object-contain"
+            />
+          </div>
+          <h1 className="text-white text-sm sm:text-base md:text-xl lg:text-2xl font-bold leading-tight">
+            தண்பொருநை அறக்கட்டளை
+          </h1>
+        </div>
 
-      <img
-        src={Logo}
-        alt="தன்பொருணை அமைப்பு Logo"
-        className="w-full h-full object-contain"
-      />
-    </div>
-    <h1 className="text-white text-xl md:text-2xl font-bold">தண்பொருநை அறக்கட்டளை</h1>
-  </div>
+        {/* Right Section - Navigation */}
+        <div className="bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 px-3 sm:px-4 md:px-6 lg:px-8 flex items-center justify-end flex-1 lg:flex-none lg:w-[55%]">
+          {/* Desktop Menu */}
+          <div className="hidden lg:flex space-x-6 xl:space-x-8">
+            {menuItems.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className="text-gray-800 hover:text-green-700 font-medium transition-colors duration-200 text-sm xl:text-base whitespace-nowrap"
+              >
+                {item.name}
+              </a>
+            ))}
+          </div>
 
-  {/* Right Section - Navigation */}
-  <div className="bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 flex-1 px-4 sm:px-6 lg:px-8 flex items-center justify-end">
-    {/* Desktop Menu */}
-    <div className="hidden md:flex space-x-8">
-      {menuItems.map((item) => (
-        <a
-          key={item.name}
-          href={item.href}
-          className="text-gray-800 hover:text-green-700 font-medium transition-colors duration-200"
-        >
-          {item.name}
-        </a>
-      ))}
-    </div>
-
-    {/* Mobile Menu Button */}
-    <button
-      className="md:hidden p-2 rounded-md text-gray-800 hover:bg-yellow-300"
-      onClick={() => setIsMenuOpen(!isMenuOpen)}
-    >
-      {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-    </button>
-  </div>
-
-  {/* Mobile Dropdown Menu */}
-  {isMenuOpen && (
-    <div className="md:hidden w-full bg-yellow-400 border-t border-yellow-500">
-      <div className="px-4 pt-2 pb-3 space-y-1">
-        {menuItems.map((item) => (
-          <a
-            key={item.name}
-            href={item.href}
-            className="block px-3 py-2 text-gray-800 hover:bg-yellow-300 rounded-md font-medium"
-            onClick={() => setIsMenuOpen(false)}
+          {/* Mobile Menu Button */}
+          <button
+            className="lg:hidden p-2 rounded-md text-gray-800 hover:bg-yellow-300 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-green-500"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
           >
-            {item.name}
-          </a>
-        ))}
+            {isMenuOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6" />}
+          </button>
+        </div>
       </div>
-    </div>
-  )}
-</nav>
 
+      {/* Mobile Dropdown Menu */}
+      <div className={`lg:hidden absolute top-full left-0 right-0 bg-yellow-400 border-t border-yellow-500 shadow-lg transition-all duration-300 ease-in-out ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
+        <div className="px-4 py-3 space-y-1">
+          {menuItems.map((item) => (
+            <a
+              key={item.name}
+              href={item.href}
+              className="block px-3 py-3 text-gray-800 hover:bg-yellow-300 rounded-md font-medium transition-colors duration-200 text-base"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {item.name}
+            </a>
+          ))}
+        </div>
+      </div>
+    </header>
 
       {/* Hero Section */}
       <section id="home" className="relative pt-5 min-h-screen overflow-hidden flex items-center">
@@ -665,7 +667,7 @@ const PorunaiPortfolio = () => {
                 </div>
                 <div className="flex items-center gap-3">
                   <Mail className="w-5 h-5 text-amber-400" />
-                  <span>thanporunaiarakattalai@gmail.com</span>
+                  <span>admin@thanporunaiarakattalai.com</span>
                 </div>
                 <div className="flex gap-3 items-start text-sm sm:text-base leading-relaxed">
                   <MapPin className="w-6 h-6 text-amber-400 mt-1 flex-shrink-0" />
